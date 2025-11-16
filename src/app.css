@@ -763,12 +763,22 @@ margin-top: 1rem;
 
 @media screen and (max-width: 767px) {
   .mapboxgl-popup-content {
-    width: clamp(15.6rem, 82vw, 18.6rem) !important; /* ~250px → ~298px - 20% groter op mobile */
+    width: clamp(17rem, 85vw, 20rem) !important; /* ~272px → ~320px - meer ruimte op mobile */
+    min-height: 26rem !important; /* Consistente verticale ruimte */
+  }
+
+  .popup-side {
+    min-height: 26rem; /* Popup sides groeien mee met container */
   }
 
   .popup-title {
-    margin-top: 1.8em;
-    font-size: 2.8em !important;
+    margin-top: 4rem;
+    font-size: 3em !important;
+    min-height: 2.2em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
   .popup-title.details {
@@ -776,18 +786,45 @@ margin-top: 1rem;
   }
 
   p {
-    font-size: 0.75rem; /* Kleinere tekst op mobile */
+    font-size: 0.9rem;
     line-height: 1.4;
   }
 
   .content-wrapper {
     padding: 1.5rem; /* Compacter op mobile */
+    position: relative;
+    min-height: 26rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Text container groeit om ruimte te vullen */
+  .popup-description-wrapper {
+    flex: 1 1 auto; /* Groeit om beschikbare ruimte te vullen */
+    margin-bottom: 4rem; /* Ruimte voor buttons onderaan */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup-description {
+    flex: 1 1 auto;
+    min-height: 0; /* Belangrijk voor flex overflow */
+  }
+
+  /* Buttons vast onderaan op voorkant */
+  .popup-front .impressie-button,
+  .popup-front .navigate-button {
+    bottom: 1.5rem !important;
+  }
+
+  .popup-front .more-info-button {
+    bottom: 1.5rem !important;
   }
 
   /* Control buttons kleiner op mobile */
   .mapboxgl-ctrl-group button {
-    width: 1.5rem !important; /* 24px */
-    height: 1.5rem !important; /* 24px */
+    width: 1.625rem !important; /* 26px - iets groter */
+    height: 1.625rem !important; /* 26px - iets groter */
     border-radius: 0.1875rem !important; /* 3px - vierkant met kleine afronding */
   }
 
@@ -806,9 +843,9 @@ margin-top: 1rem;
   }
 
   .help-button {
-    width: 1.5rem !important; /* 24px */
-    height: 1.5rem !important; /* 24px */
-    font-size: 1rem !important;
+    width: 1.625rem !important; /* 26px - iets groter */
+    height: 1.625rem !important; /* 26px - iets groter */
+    font-size: 1.05rem !important;
     border: 1.5px solid black !important;
     background: white !important;
     display: flex !important;
@@ -816,18 +853,18 @@ margin-top: 1rem;
   }
 
   .mapboxgl-ctrl-icon {
-    background-size: 1.375rem !important; /* 22px - icons groter */
+    background-size: 1.5rem !important; /* 24px - icons iets groter */
   }
 
   .popup-description {
-    max-height: 9em;
-    margin-top: .5em;
-    margin-bottom: 0.3em;
+    max-height: 10em;
+    margin-top: 0em;
+    margin-bottom: 1.5em;
   }
 
   .popup-description-wrapper {
-    margin-top: 0.3em;
-    margin-bottom: 2.5em;
+    margin-top: 0rem;
+    margin-bottom: 1.5em;
   }
 
   .popup-descriptionv2 {
@@ -869,9 +906,9 @@ margin-top: 1rem;
 .popup-descriptionv2 {
   text-align: center;
   font-family: poppins, sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.5;
-  max-height: 5em;
+  max-height: 6em;
   overflow-y: scroll;
   padding-right: 0.9375rem;
   margin-right: -0.9375rem;
@@ -1833,8 +1870,8 @@ margin-top: 1rem;
   justify-content: center;
   gap: 0.5rem; /* was 8px */
   z-index: 3;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Stijl voor de individuele icon links - Cirkel (blijft hetzelfde) */
