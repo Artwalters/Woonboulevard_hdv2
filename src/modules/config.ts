@@ -5,17 +5,17 @@ import type { MapboxOptions } from 'mapbox-gl';
 // Configuration object
 export const CONFIG = {
   MAP: {
-    // Woonboulevard Center (eind positie animatie)
-    center: [5.949252153400742, 50.89631881636659] as [number, number],
-    // OLD Heerlen Centrum: [5.979642, 50.887634]
+    // Heerlen Centrum (eind positie animatie)
+    center: [5.979642, 50.887634] as [number, number],
+    // Woonboulevard Center: [5.949252153400742, 50.89631881636659]
     zoom: 15.5,
     pitch: 45,
     bearing: -17.6,
     boundary: {
-      // Woonboulevard Boundary Center
-      center: [5.945293248082578, 50.89864658643648] as [number, number],
-      // OLD Heerlen Centrum: [5.977105864037915, 50.88774161029858]
-      radius: 1, // 1 km radius (was 0.6)
+      // Heerlen Centrum Boundary Center
+      center: [5.977105864037915, 50.88774161029858] as [number, number],
+      // Woonboulevard: [5.945293248082578, 50.89864658643648]
+      radius: 1, // 1 km radius
     },
   },
   MARKER_ZOOM: {

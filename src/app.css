@@ -452,7 +452,7 @@ h3 {
 }
 
 /* Popup flip animation */
-.hd-map-popup-wrapper {
+.popup-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -460,11 +460,11 @@ h3 {
   transform-style: preserve-3d;
 }
 
-.hd-map-popup-wrapper.is-flipped {
+.popup-wrapper.is-flipped {
   transform: rotateY(180deg);
 }
 
-.hd-map-popup-side {
+.popup-side {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -474,15 +474,15 @@ h3 {
   flex-direction: column;
 }
 
-.hd-map-popup-front {
+.popup-front {
   transform: rotateY(0deg);
 }
 
-.hd-map-popup-back {
+.popup-back {
   transform: rotateY(180deg);
 }
 
-.hd-map-content-wrapper {
+.content-wrapper {
   padding: 1.75rem 1.25rem 1.25rem 1.25rem; /* Nog compacter */
   position: relative;
   display: flex;
@@ -491,7 +491,7 @@ h3 {
 }
 
 /* Popup typography */
-.hd-map-popup-title {
+.popup-title {
   font-weight: bold;
   font-family: astronef-std-super-cond, sans-serif;
   font-size: 4em;
@@ -502,7 +502,7 @@ h3 {
   margin-top: 1.5em;
 }
 
-.hd-map-popup-title.details {
+.popup-title.details {
   font-family: poppins, sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
@@ -512,7 +512,7 @@ h3 {
   text-transform: none;
 }
 
-.hd-map-popup-background-image {
+.popup-background-image {
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -524,7 +524,7 @@ h3 {
   z-index: -2;
 }
 
-.hd-map-popup-border-overlay {
+.popup-border-overlay {
   position: absolute;
   top: 3rem;
   left: 0;
@@ -538,7 +538,7 @@ h3 {
 }
 
 /* Popup description wrapper - relative container for fades */
-.hd-map-popup-description-wrapper {
+.popup-description-wrapper {
   position: relative;
   margin-bottom: 3.5em;
   margin-top: 0.5em;
@@ -547,7 +547,7 @@ h3 {
 }
 
 /* Popup description */
-.hd-map-popup-description {
+.popup-description {
   font-family: poppins, sans-serif;
   font-size: 0.85rem;
   line-height: 1.5;
@@ -577,7 +577,7 @@ h3 {
   z-index: 2;
 }
 
-.hd-map-popup-description-ar {
+.popup-description-ar {
   font-family: poppins, sans-serif;
   font-size: 0.875rem; /* was 14px */
   margin-bottom: 5em;
@@ -587,27 +587,27 @@ h3 {
 }
 
  /* Specifieke tekststijlen voor AR popup */
- .hd-map-popup-side.ar .hd-map-popup-title {
+ .popup-side.ar .popup-title {
   color: #000000;
 }
 
-.hd-map-popup-side.ar .hd-map-popup-description {
+.popup-side.ar .popup-description {
   color: #000000;
 }
 
 /* Knoppen in AR popup */
-.hd-map-popup-side.ar .button-base {
+.popup-side.ar .button-base {
   color: #000000;
   border-color: #000000;
 }
 
 /* Styling voor beide kanten van de popup */
-.hd-map-popup-side.ar .hd-map-popup-front,
-.hd-map-popup-side.ar .hd-map-popup-back {
+.popup-side.ar .popup-front,
+.popup-side.ar .popup-back {
   color: #000000;
 }
 
-.hd-map-popup-description:active {
+.popup-description:active {
   cursor: grabbing;
 }
 
@@ -619,17 +619,17 @@ p {
 }
 
 /* Scrollbar styling for popup description */
-.hd-map-popup-description::-webkit-scrollbar {
+.popup-description::-webkit-scrollbar {
   width: 0.3125rem; /* was 5px */
   background-color: transparent;
 }
 
-.hd-map-popup-description::-webkit-scrollbar-thumb {
+.popup-description::-webkit-scrollbar-thumb {
   border-radius: 0.625rem; /* was 10px */
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.hd-map-popup-description::-webkit-scrollbar-track {
+.popup-description::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.4);
   border-radius: 0.625rem; /* was 10px */
   background-color: transparent;
@@ -722,7 +722,7 @@ p {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.hd-map-popup-ar-instructie{
+.popup-ar-instructie{
 color: black;
 margin-top: 1rem;
 }
@@ -737,11 +737,11 @@ margin-top: 1rem;
     width: clamp(17rem, 23vw, 19.8rem) !important; /* ~272px → ~317px */
   }
 
-  .hd-map-popup-title {
+  .popup-title {
     font-size: 2.8em !important;
   }
 
-  .hd-map-popup-title.details {
+  .popup-title.details {
     font-size: 1rem !important;
   }
 }
@@ -752,11 +752,11 @@ margin-top: 1rem;
     width: clamp(16.5rem, 20vw, 18.7rem) !important; /* ~264px → ~299px */
   }
 
-  .hd-map-popup-title {
+  .popup-title {
     font-size: 3.1em !important;
   }
 
-  .hd-map-popup-title.details {
+  .popup-title.details {
     font-size: 1.05rem !important;
   }
 }
@@ -767,11 +767,11 @@ margin-top: 1rem;
     min-height: 26rem !important; /* Consistente verticale ruimte */
   }
 
-  .hd-map-popup-side {
+  .popup-side {
     min-height: 26rem; /* Popup sides groeien mee met container */
   }
 
-  .hd-map-popup-title {
+  .popup-title {
     margin-top: 4rem;
     font-size: 3em !important;
     min-height: 2.2em;
@@ -781,7 +781,7 @@ margin-top: 1rem;
     justify-content: center;
   }
 
-  .hd-map-popup-title.details {
+  .popup-title.details {
     font-size: 1.1rem !important; /* Iets kleiner */
   }
 
@@ -790,7 +790,7 @@ margin-top: 1rem;
     line-height: 1.4;
   }
 
-  .hd-map-content-wrapper {
+  .content-wrapper {
     padding: 1.5rem; /* Compacter op mobile */
     position: relative;
     min-height: 26rem;
@@ -799,25 +799,25 @@ margin-top: 1rem;
   }
 
   /* Text container groeit om ruimte te vullen */
-  .hd-map-popup-description-wrapper {
+  .popup-description-wrapper {
     flex: 1 1 auto; /* Groeit om beschikbare ruimte te vullen */
     margin-bottom: 4rem; /* Ruimte voor buttons onderaan */
     display: flex;
     flex-direction: column;
   }
 
-  .hd-map-popup-description {
+  .popup-description {
     flex: 1 1 auto;
     min-height: 0; /* Belangrijk voor flex overflow */
   }
 
   /* Buttons vast onderaan op voorkant */
-  .hd-map-popup-front .impressie-button,
-  .hd-map-popup-front .navigate-button {
+  .popup-front .impressie-button,
+  .popup-front .navigate-button {
     bottom: 1.5rem !important;
   }
 
-  .hd-map-popup-front .more-info-button {
+  .popup-front .more-info-button {
     bottom: 1.5rem !important;
   }
 
@@ -856,18 +856,18 @@ margin-top: 1rem;
     background-size: 1.5rem !important; /* 24px - icons iets groter */
   }
 
-  .hd-map-popup-description {
+  .popup-description {
     max-height: 10em;
     margin-top: 0em;
     margin-bottom: 1.5em;
   }
 
-  .hd-map-popup-description-wrapper {
+  .popup-description-wrapper {
     margin-top: 0rem;
     margin-bottom: 1.5em;
   }
 
-  .hd-map-popup-descriptionv2 {
+  .popup-descriptionv2 {
     font-size: 0.75rem; /* Zelfde grootte als voorkant */
   }
 
@@ -890,7 +890,7 @@ margin-top: 1rem;
  * DETAILS CARD SPECIFIC STYLING
  * ============================== */
 
-.hd-map-popup-back .hd-map-content-wrapper {
+.popup-back .content-wrapper {
   padding: 1.5rem; /* Compacter */
   color: white;
   height: 100%;
@@ -903,7 +903,7 @@ margin-top: 1rem;
   flex-shrink: 0;
 }
 
-.hd-map-popup-descriptionv2 {
+.popup-descriptionv2 {
   text-align: center;
   font-family: poppins, sans-serif;
   font-size: 0.9rem;
@@ -920,22 +920,22 @@ margin-top: 1rem;
   -ms-user-select: none;
 }
 
-.hd-map-popup-descriptionv2:active {
+.popup-descriptionv2:active {
   cursor: grabbing;
 }
 
 /* Scrollbar styling for descriptionv2 */
-.hd-map-popup-descriptionv2::-webkit-scrollbar {
+.popup-descriptionv2::-webkit-scrollbar {
   width: 0.3125rem;
   background-color: transparent;
 }
 
-.hd-map-popup-descriptionv2::-webkit-scrollbar-thumb {
+.popup-descriptionv2::-webkit-scrollbar-thumb {
   border-radius: 0.625rem;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.hd-map-popup-descriptionv2::-webkit-scrollbar-track {
+.popup-descriptionv2::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.4);
   border-radius: 0.625rem;
   background-color: transparent;
